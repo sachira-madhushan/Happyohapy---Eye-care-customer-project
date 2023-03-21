@@ -25,7 +25,7 @@ class App:
 		# Create the input message
 		screen_message_entry = ctk.CTkEntry(master, font=('Century Gothic',20,'bold'), width=520,height=150)
 		screen_message_entry.place(x=50, y=80)
-		screen_message_entry.insert(0,"EYE CARE")  # set default value
+		screen_message_entry.insert(0,"Important Reminder:\nAs a Professional that uses the computer a lot \nyou need to take time to have your eyes checked \nyour eye care is important")  # set default value
 
 		# creat the input reminder time
 		ontime_label = ctk.CTkLabel(master, font=('Century Gothic', 14), text="Give Reminder in:")
@@ -120,9 +120,9 @@ class App:
 		# Create the window
 		self.root = ctk.CTk()
 		self.root.attributes("-fullscreen", True)
-
+		#self.root.attributes('-zoomed', True)
 		# Set up canvas
-		canvas = ctk.CTkCanvas(self.root, bg="#1e293b", highlightthickness=0)
+		canvas = ctk.CTkCanvas(self.root, bg="#999999", highlightthickness=0)
 		canvas.pack(expand=True, fill="both")
 
 		# Set up screen dimensions
@@ -148,8 +148,8 @@ class App:
 		x2 = x_coords + width
 		y2 = y_coords + height
 		rectangle = canvas.create_rectangle((x1, y1), (x2, y2), fill='#FFFFFF', outline='#FFFFFF')
-		text = canvas.create_text((x_coords + width / 2, y_coords + height / 2), text=screen_message,
-								fill="#333333", font=('Century Gothic', 12))
+		text = canvas.create_text((x_coords + width / 2, y_coords + height / 2), text=screen_message,anchor='center',
+								fill="#333333", font=('Century Gothic', 10))
 
 		last_update_time = time.monotonic()
 		time_open = 0
