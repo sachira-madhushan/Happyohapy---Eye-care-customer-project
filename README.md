@@ -1,2 +1,2 @@
-# Happyohapy---Eye-care-customer-project
-Happyohapy - Eye care customer project
+# Happyohapy-Eye-care-client-project
+Happyohapy - Eye care client project
